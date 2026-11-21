@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuća Vivaldi ★★★★ — Luksuzni smještaj u Starom gradu Dubrovniku</title>
+  <meta name="description" content="Kuća Vivaldi ★★★★ u samom srcu dubrovačkog Starog grada (Nalješkovićeva 23). Autentična kamena kuća s luksuznim sobama, na korak od Straduna. Rezervirajte svoj boravak." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="brand" aria-label="Kuća Vivaldi Početna">
+        <span class="brand-name">VIVALDI</span>
+        <span class="brand-sub">★★★★ &middot; DUBROVNIK</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Glavna navigacija">
+        <a href="#o-kuci" data-i18n="nav_about">O kući</a>
+        <a href="#sobe" data-i18n="nav_rooms">Smještaj</a>
+        <a href="#sadrzaji" data-i18n="nav_amenities">Pogodnosti</a>
+        <a href="#galerija" data-i18n="nav_gallery">Galerija</a>
+        <a href="#lokacija" data-i18n="nav_location">Lokacija</a>
+        <a href="#recenzije" data-i18n="nav_reviews">Recenzije</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Promijeni jezik">
+          <span class="lang-active">HR</span> / <span>EN</span>
+        </button>
+        <a href="#rezervacija" class="btn btn-gold btn-sm" data-i18n="nav_book">Rezerviraj</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Otvori izbornik" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <img src="images/vivaldi-02.jpg" alt="Kuća Vivaldi Dubrovnik — luksuzna soba s pogledom na kamenu uličicu Starog grada" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-text reveal">
+        <p class="eyebrow" data-i18n="hero_eyebrow">NALJEŠKOVIĆEVA ULICA 23 &middot; STARI GRAD DUBROVNIK</p>
+        <h1 data-i18n="hero_title">Kamena ljepota u srcu<br /><em>dubrovačke baštine</em></h1>
+        <p class="hero-lead" data-i18n="hero_lead">
+          Autentična kamena kuća s 4 zvjezdice unutar povijesnih zidina — spoj bezvremenske barokne elegancije, toplog dalmatinskog kamena i suvremenog luksuza, na svega minutu hoda od Straduna.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#rezervacija" class="btn btn-gold" data-i18n="hero_cta_book">Rezervirajte boravak</a>
+          <a href="#galerija" class="btn btn-outline-light" data-i18n="hero_cta_gallery">Istražite galeriju</a>
+        </div>
+      </div>
+
+      <!-- Quick Availability Bar -->
+      <form class="quick-bar reveal" id="quickBookingForm">
+        <div class="quick-field">
+          <label for="quickCheckin" data-i18n="label_checkin">Dolazak</label>
+          <input type="date" id="quickCheckin" required />
+        </div>
+        <div class="quick-field">
+          <label for="quickCheckout" data-i18n="label_checkout">Odlazak</label>
+          <input type="date" id="quickCheckout" required />
+        </div>
+        <div class="quick-field">
+          <label for="quickGuests" data-i18n="label_guests">Gosti</label>
+          <select id="quickGuests">
+            <option value="1">1 gost</option>
+            <option value="2" selected>2 gosta</option>
+            <option value="4">4 gosta</option>
+            <option value="6">6 gostiju (Cijela kuća)</option>
+          </select>
+        </div>
+        <div class="quick-field">
+          <label for="quickUnit" data-i18n="label_unit">Smještaj</label>
+          <select id="quickUnit">
+            <option value="s1">Superior Soba S1 (165 €/noć)</option>
+            <option value="s2">Deluxe Kamena Soba S2 (185 €/noć)</option>
+            <option value="s3">Comfort Soba S3 (150 €/noć)</option>
+            <option value="house">Cijela kuća Vivaldi (460 €/noć)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-dark quick-submit" data-i18n="btn_check">Provjeri cijenu</button>
+      </form>
+    </div>
+
+    <!-- Trust Bar -->
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span class="trust-value">9.6<small>/10</small></span>
+          <span class="trust-label" data-i18n="trust_rating">Ocjena na Booking.com</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">★★★★</span>
+          <span class="trust-label" data-i18n="trust_stars">Službena kategorizacija</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">1 min</span>
+          <span class="trust-label" data-i18n="trust_stradun">Hoda do Straduna</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">3 sobe</span>
+          <span class="trust-label" data-i18n="trust_rooms">Ili najam cijele kuće</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Story Section -->
+  <section class="section about-section" id="o-kuci">
+    <div class="container about-grid">
+      <div class="about-content reveal">
+        <p class="section-eyebrow" data-i18n="about_eyebrow">PRIČA O KUĆI VIVALDI</p>
+        <h2 class="section-title" data-i18n="about_title">Gdje stoljetni kamen susreće mir i profinjenost</h2>
+        <p class="body-text" data-i18n="about_p1">
+          Smještena u mirnoj, osunčanoj kamenoj uličici Nalješkovićeva 23, Kuća Vivaldi pažljivo je obnovljena povijesna dubrovačka kuća koja čuva izvorni duh Starog grada. Čim zakoračite kroz tamnozelena vrata i ugledate violončelo u kamenom stubištu, osjetit ćete toplinu i karakter ovog posebnog mjesta.
+        </p>
+        <p class="body-text" data-i18n="about_p2">
+          Kuća raspolaže s tri prostrane, luksuzno uređene dvokrevetne sobe koje se mogu iznajmiti pojedinačno ili kao <strong>cjelovita privatna kuća</strong> za obitelj i prijatelje do 6 osoba. Izloženi izvorni kameni zidovi, antikna ogledala, mjedene slavine u mramornim kupaonicama, podno grijanje te jutarnja kava na toplim kamenim skalinama stvaraju nezaboravan dubrovački ugođaj.
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight-box">
+            <span class="highlight-num">100%</span>
+            <span class="highlight-text" data-i18n="hl_authentic">Izvorni obnovljeni dubrovački kamen</span>
+          </div>
+          <div class="highlight-box">
+            <span class="highlight-num">365</span>
+            <span class="highlight-text" data-i18n="hl_year">Podno grijanje i klima za boravak cijele godine</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visuals reveal">
+        <figure class="visual-main">
+          <img src="images/vivaldi-23.jpg" alt="Ulaz u Kuću Vivaldi ★★★★ na adresi Nalješkovićeva 23 s plavim hortenzijama" loading="lazy" />
+        </figure>
+        <figure class="visual-secondary">
+          <img src="images/vivaldi-16.jpg" alt="Violončelo u stubištu Kuće Vivaldi" loading="lazy" />
+        </figure>
+        <figure class="visual-accent">
+          <img src="images/vivaldi-21.jpg" alt="Jutarnja kava i kroasan na dubrovačkim kamenim skalinama ispred Kuće Vivaldi" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms & Whole House Rental -->
+  <section class="section rooms-section" id="sobe">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <p class="section-eyebrow" data-i18n="rooms_eyebrow">SMJEŠTAJNE JEDINICE</p>
+        <h2 class="section-title" data-i18n="rooms_title">Odaberite svoju oazu u Starom gradu</h2>
+        <p class="section-subtitle" data-i18n="rooms_sub">
+          Rezervirajte jednu od tri elegantne dvokrevetne sobe ili zakupite cijelu Kuću Vivaldi za potpunu privatnost.
+        </p>
+      </div>
+
+      <div class="rooms-grid">
+        <!-- Room 1 -->
+        <article class="room-card reveal">
+          <div class="room-media">
+            <img src="images/vivaldi-01.jpg" alt="Superior Dvokrevetna Soba S1 — Kuća Vivaldi" loading="lazy" />
+            <span class="room-badge" data-i18n="badge_popular">Najtraženije</span>
+          </div>
+          <div class="room-body">
+            <div class="room-meta">
+              <span>28 m²</span>
+              <span>&middot;</span>
+              <span data-i18n="meta_2guests">Do 2 gosta</span>
+              <span>&middot;</span>
+              <span>King krevet</span>
+            </div>
+            <h3>Superior Dvokrevetna Soba (S1)</h3>
+            <p data-i18n="room1_desc">
+              Prostrana prizemna soba s privatnim ulazom izravno s kamene uličice, originalnim kamenim zidom, dvije fotelje u francuskom stilu, SMEG aparatom za kavu i mramornom kupaonicom s walk-in tušem.
+            </p>
+            <ul class="room-perks">
+              <li>Privatni ulaz</li>
+              <li>Podno grijanje</li>
+              <li>SMEG kuhalo &amp; kava</li>
+              <li>Walk-in tuš</li>
+            </ul>
+            <div class="room-footer">
+              <div class="room-price">
+                <span class="price-from" data-i18n="price_from">od</span>
+                <strong>165 €</strong>
+                <span class="price-unit" data-i18n="price_night">/ noć</span>
+              </div>
+              <button class="btn btn-dark btn-sm select-room-btn" data-unit="s1" data-guests="2" data-i18n="btn_select">Odaberi</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 2 -->
+        <article class="room-card reveal">
+          <div class="room-media">
+            <img src="images/vivaldi-03.jpg" alt="Deluxe Kamena Soba S2 — Kuća Vivaldi" loading="lazy" />
+          </div>
+          <div class="room-body">
+            <div class="room-meta">
+              <span>30 m²</span>
+              <span>&middot;</span>
+              <span data-i18n="meta_2guests">Do 2 gosta</span>
+              <span>&middot;</span>
+              <span>King krevet</span>
+            </div>
+            <h3>Deluxe Kamena Soba (S2)</h3>
+            <p data-i18n="room2_desc">
+              Svijetla soba na katu s tradicionalnim zelenim dubrovačkim škurama, toplim lusterom, kutkom za opuštanje uz SAT LCD TV, mini barom i luksuznom kupaonicom s mjedenim detaljima.
+            </p>
+            <ul class="room-perks">
+              <li>Pogled na Stari grad</li>
+              <li>Klima &amp; grijanje</li>
+              <li>Mini bar &amp; sef</li>
+              <li>Kućni ogrtači</li>
+            </ul>
+            <div class="room-footer">
+              <div class="room-price">
+                <span class="price-from" data-i18n="price_from">od</span>
+                <strong>185 €</strong>
+                <span class="price-unit" data-i18n="price_night">/ noć</span>
+              </div>
+              <button class="btn btn-dark btn-sm select-room-btn" data-unit="s2" data-guests="2" data-i18n="btn_select">Odaberi</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 3 -->
+        <article class="room-card reveal">
+          <div class="room-media">
+            <img src="images/vivaldi-02.jpg" alt="Comfort Romantična Soba S3 — Kuća Vivaldi" loading="lazy" />
+          </div>
+          <div class="room-body">
+            <div class="room-meta">
+              <span>24 m²</span>
+              <span>&middot;</span>
+              <span data-i18n="meta_2guests">Do 2 gosta</span>
+              <span>&middot;</span>
+              <span>Queen krevet</span>
+            </div>
+            <h3>Comfort Romantična Soba (S3)</h3>
+            <p data-i18n="room3_desc">
+              Intimna, šarmantno uređena dvokrevetna soba idealna za parove koji traže autentičan mir u samoj jezgri Dubrovnika, uz vrhunsku zvučnu izolaciju i sve moderne pogodnosti.
+            </p>
+            <ul class="room-perks">
+              <li>Mirna lokacija</li>
+              <li>Brzi Wi-Fi</li>
+              <li>SAT LCD TV</li>
+              <li>Sušilo &amp; kozmetika</li>
+            </ul>
+            <div class="room-footer">
+              <div class="room-price">
+                <span class="price-from" data-i18n="price_from">od</span>
+                <strong>150 €</strong>
+                <span class="price-unit" data-i18n="price_night">/ noć</span>
+              </div>
+              <button class="btn btn-dark btn-sm select-room-btn" data-unit="s3" data-guests="2" data-i18n="btn_select">Odaberi</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Whole House Feature Banner -->
+      <div class="whole-house-card reveal">
+        <div class="whole-house-img">
+          <img src="images/vivaldi-18.jpg" alt="Pročelje cijele kamene Kuće Vivaldi ★★★★ u Dubrovniku" loading="lazy" />
+        </div>
+        <div class="whole-house-body">
+          <p class="section-eyebrow" data-i18n="house_eyebrow">EKSKLUZIVNI NAJAM</p>
+          <h3 data-i18n="house_title">Cijela Kuća Vivaldi — samo za vas</h3>
+          <p data-i18n="house_desc">
+            Putujete s obitelji ili društvom? Zakupite sve tri sobe i uživajte u potpunoj privatnosti vlastite kamene rezidencije unutar dubrovačkih zidina — 3 spavaće sobe, 3 privatne kupaonice, do 6 gostiju.
+          </p>
+          <div class="whole-house-footer">
+            <div class="room-price">
+              <span class="price-from" data-i18n="price_from">od</span>
+              <strong>460 €</strong>
+              <span class="price-unit" data-i18n="price_night">/ noć</span>
+            </div>
+            <button class="btn btn-gold select-room-btn" data-unit="house" data-guests="6" data-i18n="btn_book_house">Rezerviraj cijelu kuću</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section -->
+  <section class="section amenities-section" id="sadrzaji">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <p class="section-eyebrow" data-i18n="amen_eyebrow">BEZBRIŽAN BORAVAK</p>
+        <h2 class="section-title" data-i18n="amen_title">Pažljivo odabrani sadržaji</h2>
+      </div>
+
+      <div class="amenities-grid reveal">
+        <div class="amenity-item">
+          <div class="amenity-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+          </div>
+          <h3 data-i18n="am1_t">Besplatan brzi Wi-Fi</h3>
+          <p data-i18n="am1_d">Stabilna optička veza dostupna u svim prostorijama kuće.</p>
+        </div>
+
+        <div class="amenity-item">
+          <div class="amenity-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
+          </div>
+          <h3 data-i18n="am2_t">Klima &amp; podno grijanje</h3>
+          <p data-i18n="am2_d">Savršena temperatura ljeti i ugodna toplina u hladnijim mjesecima.</p>
+        </div>
+
+        <div class="amenity-item">
+          <div class="amenity-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+          </div>
+          <h3 data-i18n="am3_t">SMEG kutak za kavu i čaj</h3>
+          <p data-i18n="am3_d">Električno kuhalo, aparat za espresso, mini bar i vinske čaše.</p>
+        </div>
+
+        <div class="amenity-item">
+          <div class="amenity-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16M4 12v4a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-4M7 12V7a3 3 0 0 1 6 0"/></svg>
+          </div>
+          <h3 data-i18n="am4_t">Mramorna kupaonica</h3>
+          <p data-i18n="am4_d">Walk-in tuš, mekani ogrtači, sušilo za kosu i luksuzna kozmetika.</p>
+        </div>
+
+        <div class="amenity-item">
+          <div class="amenity-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M8 21h8M12 19v2"/></svg>
+          </div>
+          <h3 data-i18n="am5_t">SAT LCD TV &amp; Sef</h3>
+          <p data-i18n="am5_d">Satelitski programi ravnog ekrana i osobni sef za vaše dragocjenosti.</p>
+        </div>
+
+        <div class="amenity-item">
+          <div class="amenity-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 data-i18n="am6_t">Transfer &amp; Concierge</h3>
+          <p data-i18n="am6_d">Organizacija prijevoza iz zračne luke i lokalne preporuke domaćina.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section class="section gallery-section" id="galerija">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <p class="section-eyebrow" data-i18n="gal_eyebrow">AUTENTIČNE FOTOGRAFIJE</p>
+        <h2 class="section-title" data-i18n="gal_title">Zavirite u Kuću Vivaldi</h2>
+        <div class="gallery-filters" role="tablist" aria-label="Filtriraj galeriju">
+          <button class="filter-btn active" data-filter="all" type="button" data-i18n="flt_all">Sve</button>
+          <button class="filter-btn" data-filter="interior" type="button" data-i18n="flt_int">Interijer</button>
+          <button class="filter-btn" data-filter="details" type="button" data-i18n="flt_det">Kupaonica &amp; Detalji</button>
+          <button class="filter-btn" data-filter="exterior" type="button" data-i18n="flt_ext">Eksterijer &amp; Stari grad</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <figure class="gallery-item span-2" data-category="interior">
+          <img src="images/vivaldi-01.jpg" alt="Luksuzna spavaća soba s antiknim ogledalom i baroknim lusterom" loading="lazy" />
+          <figcaption>Spavaća soba — toplina drveta i baroknog lustera</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="exterior">
+          <img src="images/vivaldi-19.jpg" alt="Pročelje Kuće Vivaldi u kamenoj uličici Starog grada" loading="lazy" />
+          <figcaption>Nalješkovićeva ulica 23 — tradicionalne zelene škure</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="interior">
+          <img src="images/vivaldi-03.jpg" alt="Izvorni kameni zid i udobne fotelje za opuštanje" loading="lazy" />
+          <figcaption>Dnevni kutak uz izvorni dubrovački kameni zid</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="details">
+          <img src="images/vivaldi-14.jpg" alt="Mramorna kupaonica sa zlatnim ogledalom i bijelim ogrtačem" loading="lazy" />
+          <figcaption>Mramorna kupaonica s ogrtačima</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="exterior">
+          <img src="images/vivaldi-21.jpg" alt="Jutarnja kava, kroasan i svježi sok na kamenim skalinama" loading="lazy" />
+          <figcaption>Jutarnja kava na osunčanim skalinama</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="details">
+          <img src="images/vivaldi-10.jpg" alt="SMEG električno kuhalo, aparat za espresso i čaše za vino" loading="lazy" />
+          <figcaption>SMEG kutak za kavu i čaj</figcaption>
+        </figure>
+        <figure class="gallery-item span-2" data-category="interior">
+          <img src="images/vivaldi-02.jpg" alt="Otvorena vrata sobe prema sunčanoj dubrovačkoj uličici" loading="lazy" />
+          <figcaption>Privatni ulaz izravno s povijesne ulice</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="details">
+          <img src="images/vivaldi-16.jpg" alt="Violončelo izloženo u kamenom stubištu Kuće Vivaldi" loading="lazy" />
+          <figcaption>Glazbeni potpis Kuće Vivaldi</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="details">
+          <img src="images/vivaldi-15.jpg" alt="Retro mjedena slavina i hotelska kozmetika" loading="lazy" />
+          <figcaption>Retro mjedeni detalji u kupaonici</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="exterior">
+          <img src="images/vivaldi-22.jpg" alt="Pogled niz kamenu uličicu prema krovovima Starog grada" loading="lazy" />
+          <figcaption>Pogled prema krovovima i zidinama Dubrovnika</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="interior">
+          <img src="images/vivaldi-06.jpg" alt="Bijeli rezbareni ormar i kutak za sjedenje" loading="lazy" />
+          <figcaption>Prostrani ormar i elegantno uređenje</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="details">
+          <img src="images/vivaldi-12.jpg" alt="Kamena niša sa srebrnim svijećnjacima i svježim jorgovanom" loading="lazy" />
+          <figcaption>Autentična kamena niša</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="exterior">
+          <img src="images/vivaldi-23.jpg" alt="Ulazna vrata Kuće Vivaldi s oznakom 4 zvjezdice" loading="lazy" />
+          <figcaption>Dobrodošli u Kuću Vivaldi ★★★★</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="details">
+          <img src="images/vivaldi-08.jpg" alt="Rezbaren drveni okvir antiknog ogledala" loading="lazy" />
+          <figcaption>Ručno rezbareno antikno ogledalo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section (Dark Editorial Band) -->
+  <section class="section location-section" id="lokacija">
+    <div class="container location-grid">
+      <div class="location-info reveal">
+        <p class="section-eyebrow eyebrow-gold" data-i18n="loc_eyebrow">NEPONOVLJIVA LOKACIJA</p>
+        <h2 class="section-title light" data-i18n="loc_title">U samom srcu Starog grada</h2>
+        <p class="body-text light-muted" data-i18n="loc_desc">
+          Nalješkovićeva ulica 23 nalazi se unutar UNESCO-ve zaštićene gradske jezgre. Sve najpoznatije dubrovačke znamenitosti, restorani, galerije i skrivene plaže pod zidinama udaljeni su tek nekoliko minuta lagane šetnje.
+        </p>
+
+        <ul class="distances-list">
+          <li><span>Stradun (glavna ulica)</span><strong>1 min hoda</strong></li>
+          <li><span>Onofrijeva fontana &amp; Vrata od Pila</span><strong>2–3 min hoda</strong></li>
+          <li><span>Dubrovačke gradske zidine</span><strong>3 min hoda</strong></li>
+          <li><span>Plaža Buža (pod zidinama)</span><strong>7 min hoda</strong></li>
+          <li><span>Plaža Banje &amp; Dubrovačka žičara</span><strong>8–10 min hoda</strong></li>
+          <li><span>Zračna luka Dubrovnik (DBV)</span><strong>25 min vožnje</strong></li>
+        </ul>
+
+        <div class="address-card">
+          <span class="address-label" data-i18n="loc_addr_label">ADRESA OBJEKTA</span>
+          <p>Nalješkovićeva ulica 23, Stari grad, 20000 Dubrovnik, Hrvatska</p>
+        </div>
+      </div>
+
+      <div class="location-map reveal">
+        <iframe
+          title="Karta lokacije Kuća Vivaldi, Nalješkovićeva ulica 23, Dubrovnik"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=18.1055%2C42.6395%2C18.1125%2C42.6435&amp;layer=mapnik&amp;marker=42.6416%2C18.1088"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <a
+          class="map-external-link"
+          href="https://www.google.com/maps/search/?api=1&query=Nalje%C5%A1kovi%C4%87eva+ul.+23,+20000,+Dubrovnik,+Croatia"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="loc_gmaps"
+        >
+          Otvori u Google Kartama &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guest Reviews Section -->
+  <section class="section reviews-section" id="recenzije">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <p class="section-eyebrow" data-i18n="rev_eyebrow">DOJMOVI GOSTIJU</p>
+        <h2 class="section-title" data-i18n="rev_title">Izvanredna ocjena 9.6 / 10</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="5 od 5 zvjezdica">★★★★★</div>
+          <p class="review-quote">
+            „Najljepši smještaj u kojem smo boravili u Dubrovniku. Kameni zidovi, besprijekorna čistoća i mramorna kupaonica oduzimaju dah, a do Straduna imate doslovno minutu hoda.“
+          </p>
+          <div class="review-author">
+            <strong>Ivana &amp; Marko</strong>
+            <span>Zagreb &middot; Boravak u rujnu</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="5 od 5 zvjezdica">★★★★★</div>
+          <p class="review-quote">
+            „An absolute gem inside the Old Town walls. Quiet alleyway, super comfortable king bed, SMEG kettle for morning coffee on the stone steps, and wonderful hosts.“
+          </p>
+          <div class="review-author">
+            <strong>Sophie &amp; Thomas</strong>
+            <span>London &middot; Boravak u lipnju</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="5 od 5 zvjezdica">★★★★★</div>
+          <p class="review-quote">
+            „Iznajmili smo cijelu kuću za produženi vikend s prijateljima. Svaki detalj — od violončela u stubištu do podnog grijanja — pokazuje koliko je ljubavi uloženo u ovu kuću.“
+          </p>
+          <div class="review-author">
+            <strong>Luka K.</strong>
+            <span>Beč &middot; Boravak u listopadu</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking & Inquiry Section -->
+  <section class="section booking-section" id="rezervacija">
+    <div class="container booking-grid">
+      <div class="booking-form-wrap reveal">
+        <p class="section-eyebrow" data-i18n="book_eyebrow">IZRAVNA REZERVACIJA</p>
+        <h2 class="section-title" data-i18n="book_title">Pošaljite upit ili rezervirajte</h2>
+        <p class="body-text" data-i18n="book_sub">
+          Ispunite podatke za brzu potvrdu raspoloživosti bez skrivenih naknada. Odgovaramo u najkraćem roku.
+        </p>
+
+        <form id="bookingForm" class="booking-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookUnit" data-i18n="label_unit">Smještajna jedinica</label>
+              <select id="bookUnit" required>
+                <option value="s1" data-price="165">Superior Dvokrevetna Soba (S1) — 165 €/noć</option>
+                <option value="s2" data-price="185">Deluxe Kamena Soba (S2) — 185 €/noć</option>
+                <option value="s3" data-price="150">Comfort Romantična Soba (S3) — 150 €/noć</option>
+                <option value="house" data-price="460">Cijela Kuća Vivaldi (do 6 gostiju) — 460 €/noć</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bookGuests" data-i18n="label_guests">Broj gostiju</label>
+              <select id="bookGuests" required>
+                <option value="1">1 gost</option>
+                <option value="2" selected>2 gosta</option>
+                <option value="3">3 gosta</option>
+                <option value="4">4 gosta</option>
+                <option value="5">5 gostiju</option>
+                <option value="6">6 gostiju</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookCheckin" data-i18n="label_checkin">Datum dolaska</label>
+              <input type="date" id="bookCheckin" required />
+            </div>
+            <div class="form-group">
+              <label for="bookCheckout" data-i18n="label_checkout">Datum odlaska</label>
+              <input type="date" id="bookCheckout" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookName" data-i18n="label_name">Ime i prezime</label>
+              <input type="text" id="bookName" placeholder="npr. Ana Horvat" required />
+            </div>
+            <div class="form-group">
+              <label for="bookEmail" data-i18n="label_email">E-mail adresa</label>
+              <input type="email" id="bookEmail" placeholder="ana@primjer.hr" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookPhone" data-i18n="label_phone">Telefon / WhatsApp</label>
+              <input type="tel" id="bookPhone" placeholder="+385 91 000 0000" required />
+            </div>
+            <div class="form-group">
+              <label for="bookArrival" data-i18n="label_arrival">Okvirno vrijeme dolaska</label>
+              <select id="bookArrival">
+                <option value="14:00 - 16:00">14:00 – 16:00</option>
+                <option value="16:00 - 18:00">16:00 – 18:00</option>
+                <option value="18:00 - 20:00">18:00 – 20:00</option>
+                <option value="Kasniji dolazak (nakon 20:00)">Kasniji dolazak (nakon 20:00)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bookNotes" data-i18n="label_notes">Posebni zahtjevi (neobavezno)</label>
+            <textarea id="bookNotes" rows="3" placeholder="Npr. potreban transfer iz zračne luke, dječji krevetić, posebna prigoda..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-full" data-i18n="btn_submit">Pošalji zahtjev za rezervaciju</button>
+        </form>
+      </div>
+
+      <!-- Dynamic Price Summary Card -->
+      <aside class="booking-summary reveal" aria-label="Sažetak rezervacije">
+        <div class="summary-photo">
+          <img id="summaryImg" src="images/vivaldi-01.jpg" alt="Odabrani smještaj u Kući Vivaldi" />
+        </div>
+        <div class="summary-content">
+          <span class="summary-tag">KUĆA VIVALDI ★★★★</span>
+          <h3 id="summaryUnitName">Superior Dvokrevetna Soba (S1)</h3>
+
+          <div class="summary-rows">
+            <div class="summary-row">
+              <span data-i18n="sum_dates">Termin</span>
+              <strong id="summaryDates">—</strong>
+            </div>
+            <div class="summary-row">
+              <span data-i18n="sum_nights">Broj noćenja</span>
+              <strong id="summaryNights">3 noćenja</strong>
+            </div>
+            <div class="summary-row">
+              <span data-i18n="sum_rate">Cijena po noćenju</span>
+              <strong id="summaryRate">165 €</strong>
+            </div>
+            <div class="summary-row">
+              <span data-i18n="sum_tax">Boravišna pristojba &amp; čišćenje</span>
+              <strong class="text-green" data-i18n="sum_included">Uključeno</strong>
+            </div>
+          </div>
+
+          <div class="summary-total">
+            <span data-i18n="sum_total">Okvirni ukupni iznos</span>
+            <strong id="summaryTotal">495 €</strong>
+          </div>
+
+          <ul class="summary-trust">
+            <li data-i18n="sum_t1">Izravna komunikacija s vlasnikom</li>
+            <li data-i18n="sum_t2">Prijava od 14:00 &middot; Odjava do 10:00</li>
+            <li data-i18n="sum_t3">Najbolja cijena za izravni upit</li>
+          </ul>
+
+          <a
+            href="https://www.booking.com/hotel/hr/vivaldi.hr.html?aid=304142&label=gen173nr-10CAsoZUIHdml2YWxkaUgQWARoZYgBApgBM7gBCcgBEdgBA-gBAfgBAYgCAagCAbgCivCgygbAAgHSAiQ3NDRiNGFiMi1jYThmLTRmMWItOGI5OC1lZGQ4NTMwNGQwMWPYAgHgAgE-Share-lw9zqBM%401795007077&room1=A%2CA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="booking-com-link"
+            data-i18n="btn_bookingcom"
+          >
+            Pogledaj oglas i na Booking.com &rarr;
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">VIVALDI</span>
+        <span class="brand-sub">★★★★ &middot; STARI GRAD DUBROVNIK</span>
+        <p data-i18n="footer_desc">
+          Autentična kamena kuća za odmor u srcu dubrovačke povijesne jezgre.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_nav">Navigacija</h4>
+        <a href="#o-kuci" data-i18n="nav_about">O kući</a>
+        <a href="#sobe" data-i18n="nav_rooms">Smještaj</a>
+        <a href="#galerija" data-i18n="nav_gallery">Galerija</a>
+        <a href="#lokacija" data-i18n="nav_location">Lokacija</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Kontakt</h4>
+        <p>Nalješkovićeva ulica 23<br />20000 Dubrovnik, Hrvatska</p>
+        <p><a href="mailto:info@vivaldi-dubrovnik.hr">info@vivaldi-dubrovnik.hr</a></p>
+        <p><a href="tel:+385910000000">+385 91 000 0000</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Kuća Vivaldi Dubrovnik. Sva prava pridržana.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Pregled fotografije">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Zatvori">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Prethodna">&#8249;</button>
+    <div class="lightbox-stage">
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Sljedeća">&#8250;</button>
+  </div>
+
+  <!-- Reservation Confirmation Modal -->
+  <div class="modal-backdrop" id="confirmModal" aria-hidden="true" role="dialog" aria-labelledby="confirmTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="confirmClose" type="button" aria-label="Zatvori">&times;</button>
+      <div class="modal-check" aria-hidden="true">✓</div>
+      <h3 id="confirmTitle" data-i18n="mod_title">Upit je uspješno zaprimljen</h3>
+      <p id="confirmMessage"></p>
+      <div class="modal-ref">
+        <span data-i18n="mod_ref">Broj upita:</span>
+        <strong id="confirmRef">VIV-2026-0000</strong>
+      </div>
+      <button class="btn btn-dark btn-full" id="confirmOk" type="button" data-i18n="mod_ok">U redu</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
